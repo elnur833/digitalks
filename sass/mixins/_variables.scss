@@ -1,0 +1,35 @@
+// VARIABLES
+$black:#000000;
+$title-color: #010202;
+$contact: #a09f9f;
+$white:#FFFFFF;
+$red:#742030;
+$whitered:#b34445;
+$blackopacityfifty:rgba(0, 0, 0, 0.5);
+$blackred:#b44445;
+$default-gray:#d8d8d8;
+$promo-gray:#222222;
+$prom:#979797;
+$main-colors:#231f20;
+$gray: #f2f2f2;
+$def-gray:#fefefe;
+$lrn:#787878;
+$client-color:#010202;
+// FONTS
+%MONTREGULAR {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+%MONTMEDIUM {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+%MONTBOLD {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+%MONTBLACK {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}

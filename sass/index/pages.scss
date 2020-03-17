@@ -1,0 +1,319 @@
+@import "../mixins/variables.scss";
+@import "../mixins/mixins.scss";
+@import "./animations.scss";
+
+.blackred-page {
+    background: $blackred;
+    /* -----------
+    *** HEADER ****
+    * ------------ */
+    .header {
+        @include flex;
+        @include space-between;
+        padding-top: 40px;
+        // margin-bottom: 65px;
+        @include md-screens {
+            @include flex-align-center;
+        }
+        .logo-container {
+            width: 80px;
+            img {
+                width: 100%;
+            }
+        }
+        .header-title {
+            display: none;
+            h5 {
+                margin-bottom: 0px;
+                @extend %MONTBOLD;
+                font-size: 12px;
+                color: $title-color;
+                text-align: center;
+            }
+            @include md-screens {
+                display: block;
+            }
+        }
+        #burger-menu {
+            cursor: pointer;
+            height: 27px;
+            width: 27px;
+            overflow: visible;
+            position: relative;
+            z-index:10;
+            display: none;
+            @include md-screens {
+                display: block;
+                margin-top: 0px;
+            }
+            // @include sm-screens {
+            //     margin-top: 25px;
+            // }
+            span {
+                @extend %burgerspan;
+                background: $red;
+                right: 0px;
+                top: 13px;
+                width: 27px;
+                &:before {
+                    content: "";
+                    background: $red;
+                    @extend %burgerspan;
+                }
+                &:after {
+                    content: "";
+                    background: $red;
+                    @extend %burgerspan;
+                }
+            }
+        }
+        #burger-menu.close {
+            span {
+                @include transform-rotate(-45deg);
+                top: 13px;
+                width: 27px;
+                background: $white;
+                &:before {
+                    top: 0px;
+                    @include transform-rotate(90deg);
+                    width: 27px;
+                    background: $white;
+                }
+                &:after {
+                    top: 0px;
+                    left:0;
+                    @include transform-rotate(90deg);
+                    opacity:0;
+                    width:0;
+                    background: $white;
+                }
+            }
+        }
+        #menu {
+            z-index:5;
+            min-width:100%;
+            min-height:100%;
+            position: fixed;
+            top:0;
+            height:0;
+            visibility: hidden;
+            opacity: 0;
+            text-align:center;
+            padding-top:20px;
+            left: 0;
+            right: 0;
+            
+            @include transition-full(all 0.3s ease-in-out);
+            ul {
+                margin-bottom: 0px;
+                li {
+                    list-style: none;
+                    // &:last-child {
+                    //     a {
+                    //         margin-bottom: 10px;
+                    //     }
+                    // }
+                    a {
+                        color:$white;
+                        display:inline-block;
+                        font-size: 16px;
+                        margin-bottom:30px;
+                        text-decoration:none;
+                        @extend %MONTMEDIUM;
+                    }
+                }
+            }
+            .menu-socials {
+                ul {
+                    @include flex;
+                    @include justify-content-center;
+                    
+                    li {
+                        margin-right: 20px;
+                        position: relative;
+                        &:last-child {
+                            margin-right: 0px;
+                        }
+                        &:nth-child(2){
+                            &:before {
+                                @extend %bef;
+                            }
+                        }
+                        &:nth-child(3){
+                            &:before {
+                                @extend %bef;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #menu.overlay {
+            visibility: visible;
+            opacity: 1;
+            padding-top:65px;
+            background:rgba(116, 32, 48, 0.98);
+        }
+        .header-main {
+            @include md-screens {
+                display: none;
+            }
+    
+            ul {
+                padding-inline-start: 0px;
+                @include flex;
+                li {
+                    margin-right:40px;
+                    #lang-menu {
+                        cursor: pointer;
+                        color: $white;
+                        .lang-list {
+                            @include flex-column;
+                            position: absolute;
+                            display: none;
+                            
+                        }
+                        div {
+                            span {
+                                @extend %MONTMEDIUM;
+                            }
+                        }
+                    }
+                    a {
+                        @extend %MONTMEDIUM;
+                        color:$white;
+                        text-decoration: none;
+                    }
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                }
+                li.active {
+                    a {
+                        border-bottom: 1px solid $white;
+                    }
+                }
+            }
+        }
+        .contacts {
+            font-size: 13px;
+            @extend %MONTREGULAR;
+            @include md-screens {
+                display: none;
+            }
+            ul {
+                li {
+                    a {
+                        color: $contact;
+                        text-decoration: none;
+                    }
+                    &:last-child {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    %burgerspan {
+        display: block;
+        height: 1px;
+        opacity: 1;
+        border-radius: 3px;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+        @include transition-full(0.3s ease-in-out);
+    }
+    %bef {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 1px;
+        background: $black;
+        right: 30px;
+        top: 3px;
+        @include sm-screens {
+            right: 34px;
+        }
+    }
+    #burger-menu span:before {
+        left: 0px;
+        top: -10px;
+        width: 27px;
+    }
+    #burger-menu span:after {
+        left: 0px;
+        top: 10px;
+        width: 27px;
+    }
+    /* -----------
+    *** MAIN ****
+    * ------------ */
+    .main {
+        min-height: 100vh;
+        @include flex;
+        @include flex-align-center;
+        @include justify-content-center;
+        @include sm-screens {
+            min-height: 50vh;
+        }
+        .main-title {
+            @include md-screens {
+                display: none;
+            }
+            h1 {
+                @extend %MONTBOLD;
+                font-size: 48px;
+                letter-spacing: -1.9px;
+                color: $white;
+                margin-bottom: 80px;
+                text-align: center;
+            }
+        }
+        .shark {
+            width: 600px;
+            margin: 0 auto;
+            @include md-screens {
+                width: 75%;
+            }
+            .scroll {
+                position: relative;
+                @include lg-screens {
+                    display: none;
+                }
+                .main-scroll {
+                    position: absolute;
+                    right: -220px;
+                    bottom: 0px;
+                    text-align: center;
+                    @include lg-screens{
+                        right: -180px;
+                    }
+                    .scroll-txt {
+                        @include transform-rotate(90deg);
+                        display: block;
+                        font-size: 9px;
+                        @extend %MONTMEDIUM;
+                        letter-spacing: 5px;
+                        color: $contact;
+                    }
+                    .line {
+                        width: 1px;
+                        background: $contact;
+                        height: 100px;
+                        display: block;
+                        margin: 20px 20px -13px 26.98px;
+                    }
+                    .dot {
+                        margin-left: 1px;
+                        color: $contact;
+                    }
+                }
+            }
+            img  {
+                width: 100%;
+            }
+            
+        }   
+        
+    }
+}

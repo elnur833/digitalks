@@ -1,0 +1,444 @@
+/* line 19, ../../sass/mixins/_variables.scss */
+.blackred-page .header .contacts {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+/* line 23, ../../sass/mixins/_variables.scss */
+.blackred-page .header #menu ul li a, .blackred-page .header .header-main ul li #lang-menu div span, .blackred-page .header .header-main ul li a, .blackred-page .main .shark .scroll .main-scroll .scroll-txt {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+/* line 27, ../../sass/mixins/_variables.scss */
+.blackred-page .header .header-title h5, .blackred-page .main .main-title h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* line 1, ../../sass/index/animations.scss */
+.floating {
+  animation-name: floating;
+  -webkit-animation-name: floating;
+  animation-duration: 5.5s;
+  -webkit-animation-duration: 5.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+/* line 5, ../../sass/index/pages.scss */
+.blackred-page {
+  background: #FF055A;
+  /* -----------
+  *** HEADER ****
+  * ------------ */
+  /* -----------
+  *** MAIN ****
+  * ------------ */
+}
+/* line 10, ../../sass/index/pages.scss */
+.blackred-page .header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 10, ../../sass/index/pages.scss */
+  .blackred-page .header {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+/* line 18, ../../sass/index/pages.scss */
+.blackred-page .header .logo-container {
+  width: 80px;
+}
+/* line 20, ../../sass/index/pages.scss */
+.blackred-page .header .logo-container img {
+  width: 100%;
+}
+/* line 24, ../../sass/index/pages.scss */
+.blackred-page .header .header-title {
+  display: none;
+}
+/* line 26, ../../sass/index/pages.scss */
+.blackred-page .header .header-title h5 {
+  margin-bottom: 0px;
+  font-size: 12px;
+  color: #010202;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  /* line 24, ../../sass/index/pages.scss */
+  .blackred-page .header .header-title {
+    display: block;
+  }
+}
+/* line 37, ../../sass/index/pages.scss */
+.blackred-page .header #burger-menu {
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  /* line 37, ../../sass/index/pages.scss */
+  .blackred-page .header #burger-menu {
+    display: block;
+    margin-top: 0px;
+  }
+}
+/* line 52, ../../sass/index/pages.scss */
+.blackred-page .header #burger-menu span {
+  background: #742030;
+  right: 0px;
+  top: 13px;
+  width: 27px;
+}
+/* line 58, ../../sass/index/pages.scss */
+.blackred-page .header #burger-menu span:before {
+  content: "";
+  background: #742030;
+}
+/* line 63, ../../sass/index/pages.scss */
+.blackred-page .header #burger-menu span:after {
+  content: "";
+  background: #742030;
+}
+/* line 71, ../../sass/index/pages.scss */
+.blackred-page .header #burger-menu.close span {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 13px;
+  width: 27px;
+  background: #FFFFFF;
+}
+/* line 76, ../../sass/index/pages.scss */
+.blackred-page .header #burger-menu.close span:before {
+  top: 0px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 27px;
+  background: #FFFFFF;
+}
+/* line 82, ../../sass/index/pages.scss */
+.blackred-page .header #burger-menu.close span:after {
+  top: 0px;
+  left: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  opacity: 0;
+  width: 0;
+  background: #FFFFFF;
+}
+/* line 92, ../../sass/index/pages.scss */
+.blackred-page .header #menu {
+  z-index: 5;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  left: 0;
+  right: 0;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+/* line 107, ../../sass/index/pages.scss */
+.blackred-page .header #menu ul {
+  margin-bottom: 0px;
+}
+/* line 109, ../../sass/index/pages.scss */
+.blackred-page .header #menu ul li {
+  list-style: none;
+}
+/* line 116, ../../sass/index/pages.scss */
+.blackred-page .header #menu ul li a {
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+/* line 127, ../../sass/index/pages.scss */
+.blackred-page .header #menu .menu-socials ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+/* line 131, ../../sass/index/pages.scss */
+.blackred-page .header #menu .menu-socials ul li {
+  margin-right: 20px;
+  position: relative;
+}
+/* line 134, ../../sass/index/pages.scss */
+.blackred-page .header #menu .menu-socials ul li:last-child {
+  margin-right: 0px;
+}
+/* line 151, ../../sass/index/pages.scss */
+.blackred-page .header #menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 65px;
+  background: rgba(116, 32, 48, 0.98);
+}
+@media only screen and (max-width: 768px) {
+  /* line 157, ../../sass/index/pages.scss */
+  .blackred-page .header .header-main {
+    display: none;
+  }
+}
+/* line 162, ../../sass/index/pages.scss */
+.blackred-page .header .header-main ul {
+  padding-inline-start: 0px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 165, ../../sass/index/pages.scss */
+.blackred-page .header .header-main ul li {
+  margin-right: 40px;
+}
+/* line 167, ../../sass/index/pages.scss */
+.blackred-page .header .header-main ul li #lang-menu {
+  cursor: pointer;
+  color: #FFFFFF;
+}
+/* line 170, ../../sass/index/pages.scss */
+.blackred-page .header .header-main ul li #lang-menu .lang-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  display: none;
+}
+/* line 182, ../../sass/index/pages.scss */
+.blackred-page .header .header-main ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+/* line 187, ../../sass/index/pages.scss */
+.blackred-page .header .header-main ul li:last-child {
+  margin-right: 0px;
+}
+/* line 192, ../../sass/index/pages.scss */
+.blackred-page .header .header-main ul li.active a {
+  border-bottom: 1px solid #FFFFFF;
+}
+/* line 198, ../../sass/index/pages.scss */
+.blackred-page .header .contacts {
+  font-size: 13px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 198, ../../sass/index/pages.scss */
+  .blackred-page .header .contacts {
+    display: none;
+  }
+}
+/* line 206, ../../sass/index/pages.scss */
+.blackred-page .header .contacts ul li a {
+  color: #a09f9f;
+  text-decoration: none;
+}
+/* line 210, ../../sass/index/pages.scss */
+.blackred-page .header .contacts ul li:last-child {
+  text-align: right;
+}
+/* line 217, ../../sass/index/pages.scss */
+.blackred-page .header #burger-menu span, .blackred-page .header #burger-menu span:before, .blackred-page .header #burger-menu span:after {
+  display: block;
+  height: 1px;
+  opacity: 1;
+  border-radius: 3px;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+/* line 226, ../../sass/index/pages.scss */
+.blackred-page .header #menu .menu-socials ul li:nth-child(2):before, .blackred-page .header #menu .menu-socials ul li:nth-child(3):before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 1px;
+  background: #000000;
+  right: 30px;
+  top: 3px;
+}
+@media only screen and (max-width: 568px) {
+  /* line 226, ../../sass/index/pages.scss */
+  .blackred-page .header #menu .menu-socials ul li:nth-child(2):before, .blackred-page .header #menu .menu-socials ul li:nth-child(3):before {
+    right: 34px;
+  }
+}
+/* line 238, ../../sass/index/pages.scss */
+.blackred-page #burger-menu span:before {
+  left: 0px;
+  top: -10px;
+  width: 27px;
+}
+/* line 243, ../../sass/index/pages.scss */
+.blackred-page #burger-menu span:after {
+  left: 0px;
+  top: 10px;
+  width: 27px;
+}
+/* line 251, ../../sass/index/pages.scss */
+.blackred-page .main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 568px) {
+  /* line 251, ../../sass/index/pages.scss */
+  .blackred-page .main {
+    min-height: 50vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 259, ../../sass/index/pages.scss */
+  .blackred-page .main .main-title {
+    display: none;
+  }
+}
+/* line 263, ../../sass/index/pages.scss */
+.blackred-page .main .main-title h1 {
+  font-size: 48px;
+  letter-spacing: -1.9px;
+  color: #FFFFFF;
+  margin-bottom: 80px;
+  text-align: center;
+}
+/* line 272, ../../sass/index/pages.scss */
+.blackred-page .main .shark {
+  width: 600px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  /* line 272, ../../sass/index/pages.scss */
+  .blackred-page .main .shark {
+    width: 75%;
+  }
+}
+/* line 278, ../../sass/index/pages.scss */
+.blackred-page .main .shark .scroll {
+  position: relative;
+}
+@media only screen and (max-width: 992px) {
+  /* line 278, ../../sass/index/pages.scss */
+  .blackred-page .main .shark .scroll {
+    display: none;
+  }
+}
+/* line 283, ../../sass/index/pages.scss */
+.blackred-page .main .shark .scroll .main-scroll {
+  position: absolute;
+  right: -220px;
+  bottom: 0px;
+  text-align: center;
+}
+@media only screen and (max-width: 992px) {
+  /* line 283, ../../sass/index/pages.scss */
+  .blackred-page .main .shark .scroll .main-scroll {
+    right: -180px;
+  }
+}
+/* line 291, ../../sass/index/pages.scss */
+.blackred-page .main .shark .scroll .main-scroll .scroll-txt {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  display: block;
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: #a09f9f;
+}
+/* line 299, ../../sass/index/pages.scss */
+.blackred-page .main .shark .scroll .main-scroll .line {
+  width: 1px;
+  background: #a09f9f;
+  height: 100px;
+  display: block;
+  margin: 20px 20px -13px 26.98px;
+}
+/* line 306, ../../sass/index/pages.scss */
+.blackred-page .main .shark .scroll .main-scroll .dot {
+  margin-left: 1px;
+  color: #a09f9f;
+}
+/* line 312, ../../sass/index/pages.scss */
+.blackred-page .main .shark img {
+  width: 100%;
+}

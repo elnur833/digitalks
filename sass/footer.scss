@@ -1,0 +1,348 @@
+@import "mixins/variables.scss";
+@import "mixins/mixins.scss";
+
+footer {
+    height: 70px;
+    .main-footer {
+        @extend %flexbetween;
+        border-bottom: 1px solid $main-colors;
+        padding-bottom: 35px;
+        margin-bottom: 35px;
+        @include lg-screens {
+            display: none !important;
+        }
+        .mail {
+            h4 {
+                @extend %sizefont;
+                color: $lrn;
+            }
+            a {
+                text-decoration: none;
+                @extend %sizefont;
+                color: $lrn;
+            }
+        }
+        .popup-btn {
+            button {
+                background: $blackred;
+                color: $def-gray;
+                padding: 15px 30px;
+                border: none;
+                cursor: pointer;
+                @extend %sizefont;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        @extend %flexbetween;
+        padding-bottom: 60px;
+        @include lg-screens {
+            display: none !important;
+        }
+        .footer-adress {
+            h4 {
+                font-size: 12px;
+                color: $lrn;
+                @extend %MONTBOLD;
+                margin-bottom: 15px;
+            }
+        }
+        .footer-contacts {
+            h4 {
+                text-align: right;
+                a {
+                    text-decoration: none;
+                    color: $lrn;
+                    @extend %MONTBOLD;
+                    font-size: 12px;
+                }
+            }
+            .socials {
+                @include flex;
+                h4 {
+                    margin-left: 20px;
+                }
+                ul {
+                    @include flex;
+                    li {
+                        &:first-child {
+                            margin-left: 0px;
+                        }
+                        line-height: 1.9;
+                        margin-left: 10px;
+                        a {
+                            text-decoration: none;
+                            font-size: 20px;
+                            color: $lrn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mobile-footer {
+        display: none;
+        @include lg-screens {
+            display: block;
+        }
+        .modal-btn {
+            text-align: center;
+            margin-bottom: 30px;
+            button {
+                background: $black;
+                border-radius: 3px;
+                color: $def-gray;
+                padding: 15px 30px;
+                border: none;
+                cursor: pointer;
+                @extend %sizefont;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        .mobile-main-footer {
+            @include flex;
+            @include space-between;
+            .contacts {
+                @include flex;
+                @include flex-column;
+                span {
+                    a {
+                        text-decoration: none;
+                        color: $lrn;
+                        @extend %MONTBOLD;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .socials {
+                ul {
+                    @include flex;
+                    li {
+                        &:first-child {
+                            margin-left: 0px;
+                        }
+                        line-height: 1.9;
+                        margin-left: 10px;
+                        a {
+                            text-decoration: none;
+                            font-size: 20px;
+                            color: $lrn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// body.md-show {
+//     overflow: hidden;
+// }
+//Component
+
+
+  .modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll !important;
+    display: none;
+    z-index: 2;
+  }
+    
+  .modal-inner {
+    background-color: #fff;
+    border-radius: 3px;
+    // max-width: 500px;
+    // margin: 50px auto;
+    padding: 5vh 150px;
+    min-height: 100vh;
+    @include md-screens {
+        padding: 20px;
+    }
+  }
+  
+  /* Placed on the body while a modal is open to prevent scrolling. */
+  .showing-modal {
+    overflow: hidden;
+  }
+
+
+  
+  #site-content {
+    background-color: $white;
+    border: 1px solid $white;
+    padding: 10px;
+  }
+.form-title {
+    @extend %MONTBLACK;
+    font-size: 56px;
+    @include md-screens {
+        font-size: 25px;
+    }
+}
+.form-description {
+    font-size: 24px;
+    margin-bottom: 40px;
+    padding-right: 60px;
+    @include md-screens {
+        font-size: 16px;
+        padding-right: 0px;
+    }
+}
+form {
+    width: 35%;
+    @include flex;
+    @include flex-column;
+    @include md-screens {
+        width: 95%;
+    }
+    .input-inner {
+        box-sizing: border-box;
+        padding: 18px 0;
+        font-size: 18px;
+        border-bottom: thin solid $black;
+        width: 100%;
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    input[type="submit"] {
+        text-decoration:none;
+        background: $blackred;
+        font-size: 20px;
+        padding: 15px 30px;
+        width: 195px;
+        color: $def-gray;
+        cursor: pointer;
+        @include md-screens {
+            width: 100%;
+        }
+    }
+    .checkbox {
+        @include flex;
+        #rules {
+            width: 15px;
+            margin-top: 7px;
+            margin-right: 20px;
+        }
+    }
+    
+    input , textarea {
+        background: transparent;
+        border: none;
+        width: 100%;
+        @extend %MONTMEDIUM;
+        &:focus {
+            outline: none;
+        }
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $black;
+            opacity: 1; /* Firefox */
+            @extend %MONTMEDIUM;
+        }
+          
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color:$black;
+        }
+          
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: $black;
+        }
+    }
+
+}
+.md-close {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 45px;
+    
+    @include transition-full(all 0.3s ease-in-out);
+    &:hover {
+        background: $lrn;
+        color: $white;
+    }
+    &:focus {
+        outline: none;
+    }
+} 
+
+
+
+.checkbox-custom, .radio-custom {
+    opacity: 0;
+    position: absolute;   
+}
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+.checkbox-custom-label, .radio-custom-label {
+    position: relative;
+    line-height: 1;
+    @include flex;
+}
+
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    background: $blackred;
+    color: #fff;
+    font-size: 12px;
+}
+
+.radio-custom + .radio-custom-label:before {
+    border-radius: 50%;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    color: #bbb;
+}
+
+
+
+
+%flexbetween {
+    @include flex;
+    @include space-between;
+}
+%sizefont {
+    @extend %MONTREGULAR;
+    font-size: 20px;
+}

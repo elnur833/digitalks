@@ -1,0 +1,540 @@
+/* line 19, ../sass/mixins/_variables.scss */
+footer .main-footer .mail h4,
+footer .main-footer .mail a,
+footer .main-footer .popup-btn button,
+footer .mobile-footer .modal-btn button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+/* line 23, ../sass/mixins/_variables.scss */
+form input,
+form textarea,
+form input::placeholder,
+form textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+/* line 27, ../sass/mixins/_variables.scss */
+footer .footer-bottom .footer-adress h4,
+footer .footer-bottom .footer-contacts h4 a,
+footer .mobile-footer .mobile-main-footer .contacts span a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+/* line 32, ../sass/mixins/_variables.scss */
+.form-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+/* line 4, ../sass/footer.scss */
+footer {
+  height: 70px;
+}
+/* line 6, ../sass/footer.scss */
+footer .main-footer {
+  border-bottom: 1px solid #231f20;
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+}
+@media only screen and (max-width: 992px) {
+  /* line 6, ../sass/footer.scss */
+  footer .main-footer {
+    display: none !important;
+  }
+}
+/* line 15, ../sass/footer.scss */
+footer .main-footer .mail h4 {
+  color: #787878;
+}
+/* line 19, ../sass/footer.scss */
+footer .main-footer .mail a {
+  text-decoration: none;
+  color: #787878;
+}
+
+/* Footer contact us */
+
+footer .footer-connect {
+  padding: 0px 10px;
+}
+footer .footer-connect a {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #787878;
+  
+}
+footer .footer-connect a svg  path{
+  fill: #787878 !important;
+}
+footer .footer-connect a svg{
+  position: relative;
+  top: -45px;
+  left: 50px;
+
+}
+footer .footer-connect a:hover{
+  text-decoration: none;
+}
+/* line 26, ../sass/footer.scss */
+footer .main-footer .popup-btn button {
+  background: #FF055A;
+  color: #fefefe;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+footer .main-footer .popup-btn button:hover {
+  transform: scale(1.1);
+}
+/* line 33, ../sass/footer.scss */
+footer .main-footer .popup-btn button:focus {
+  outline: none;
+}
+/* line 39, ../sass/footer.scss */
+footer .footer-bottom {
+  padding-bottom: 0px;
+}
+@media only screen and (max-width: 992px) {
+  /* line 39, ../sass/footer.scss */
+  footer .footer-bottom {
+    display: none !important;
+  }
+}
+/* line 46, ../sass/footer.scss */
+footer .footer-bottom .footer-adress h4 {
+  font-size: 18px;
+  color: #787878;
+  margin-bottom: 15px;
+}
+footer .footer-bottom .footer-adress h4 a{
+  color: #787878;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+footer .footer-bottom .footer-adress h4 a:hover{
+  color: #FF055A;
+  text-decoration: none;
+}
+
+/* line 54, ../sass/footer.scss */
+footer .footer-bottom .footer-contacts h4 {
+  text-align: right;
+}
+/* line 56, ../sass/footer.scss */
+footer .footer-bottom .footer-contacts h4 a {
+  text-decoration: none;
+  color: #787878;
+  font-size: 18px;
+}
+/* line 63, ../sass/footer.scss */
+footer .footer-bottom .footer-contacts .socials {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  float: right;
+}
+/* line 65, ../sass/footer.scss */
+footer .footer-bottom .footer-contacts .socials h4 {
+  margin-left: 20px;
+}
+/* line 68, ../sass/footer.scss */
+footer .footer-bottom .footer-contacts .socials ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: -7px;
+}
+/* line 70, ../sass/footer.scss */
+footer .footer-bottom .footer-contacts .socials ul li {
+  line-height: 1.9;
+  margin-left: 10px;
+}
+/* line 71, ../sass/footer.scss */
+footer .footer-bottom .footer-contacts .socials ul li:first-child {
+  margin-left: 0px;
+}
+/* line 76, ../sass/footer.scss */
+footer .footer-bottom .footer-contacts .socials ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #787878;
+}
+/* line 86, ../sass/footer.scss */
+footer .mobile-footer {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  /* line 86, ../sass/footer.scss */
+  footer .mobile-footer {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* line 91, ../sass/footer.scss */
+footer .mobile-footer .modal-btn {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* line 94, ../sass/footer.scss */
+footer .mobile-footer .modal-btn button {
+  background: #000000;
+  border-radius: 3px;
+  color: #fefefe;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+}
+/* line 102, ../sass/footer.scss */
+footer .mobile-footer .modal-btn button:focus {
+  outline: none;
+}
+/* line 107, ../sass/footer.scss */
+footer .mobile-footer .mobile-main-footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  flex-direction: column;
+}
+/* line 110, ../sass/footer.scss */
+footer .mobile-footer .mobile-main-footer .contacts {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+/* line 114, ../sass/footer.scss */
+footer .mobile-footer .mobile-main-footer .contacts span a {
+  text-decoration: none;
+  color: #787878;
+  font-size: 12px;
+}
+/* line 123, ../sass/footer.scss */
+footer .mobile-footer .mobile-main-footer .socials ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 125, ../sass/footer.scss */
+footer .mobile-footer .mobile-main-footer .socials ul li {
+  line-height: 1.9;
+  margin-left: 10px;
+}
+/* line 126, ../sass/footer.scss */
+footer .mobile-footer .mobile-main-footer .socials ul li:first-child {
+  margin-left: 0px;
+}
+/* line 131, ../sass/footer.scss */
+footer .mobile-footer .mobile-main-footer .socials ul li a {
+  text-decoration: none;
+  font-size: 19px;
+  color: #787878;
+}
+
+/* line 149, ../sass/footer.scss */
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll !important;
+  display: none;
+  z-index: 2;
+}
+
+/* line 161, ../sass/footer.scss */
+.modal-inner {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 5vh 150px;
+  min-height: 100vh;
+}
+@media only screen and (max-width: 768px) {
+  /* line 161, ../sass/footer.scss */
+  .modal-inner {
+    padding: 20px;
+  }
+}
+
+/* Placed on the body while a modal is open to prevent scrolling. */
+/* line 174, ../sass/footer.scss */
+.showing-modal {
+  overflow: hidden;
+}
+
+/* line 180, ../sass/footer.scss */
+#site-content {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 10px;
+}
+
+/* line 185, ../sass/footer.scss */
+.form-title {
+  font-size: 56px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 185, ../sass/footer.scss */
+  .form-title {
+    font-size: 25px;
+  }
+}
+
+/* line 192, ../sass/footer.scss */
+.form-description {
+  font-size: 24px;
+  margin-bottom: 40px;
+  padding-right: 60px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 192, ../sass/footer.scss */
+  .form-description {
+    font-size: 16px;
+    padding-right: 0px;
+  }
+}
+
+/* line 201, ../sass/footer.scss */
+form {
+  width: 35%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media only screen and (max-width: 768px) {
+  /* line 201, ../sass/footer.scss */
+  form {
+    width: 95%;
+  }
+}
+/* line 208, ../sass/footer.scss */
+form .input-inner {
+  box-sizing: border-box;
+  padding: 18px 0;
+  font-size: 18px;
+  border-bottom: thin solid #000000;
+  width: 100%;
+}
+/* line 214, ../sass/footer.scss */
+form .input-inner:last-of-type {
+  border-bottom: none;
+}
+/* line 218, ../sass/footer.scss */
+form input[type="submit"] {
+  text-decoration: none;
+  background: #FF055A;
+  font-size: 20px;
+  padding: 15px 30px;
+  width: 195px;
+  color: #fefefe;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  /* line 218, ../sass/footer.scss */
+  form input[type="submit"] {
+    width: 100%;
+  }
+}
+/* line 230, ../sass/footer.scss */
+form .checkbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 232, ../sass/footer.scss */
+form .checkbox #rules {
+  width: 15px;
+  margin-top: 7px;
+  margin-right: 20px;
+}
+/* line 239, ../sass/footer.scss */
+form input,
+form textarea {
+  background: transparent;
+  border: none;
+  width: 100%;
+}
+/* line 244, ../sass/footer.scss */
+form input:focus,
+form textarea:focus {
+  outline: none;
+}
+/* line 247, ../sass/footer.scss */
+form input::placeholder,
+form textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000000;
+  opacity: 1;
+  /* Firefox */
+}
+/* line 253, ../sass/footer.scss */
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #000000;
+}
+/* line 257, ../sass/footer.scss */
+form input::-ms-input-placeholder,
+form textarea::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #000000;
+}
+
+/* line 263, ../sass/footer.scss */
+.md-close {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 45px;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+/* line 275, ../sass/footer.scss */
+.md-close:hover {
+  background: #787878;
+  color: #ffffff;
+}
+/* line 279, ../sass/footer.scss */
+.md-close:focus {
+  outline: none;
+}
+
+/* line 286, ../sass/footer.scss */
+.checkbox-custom,
+.radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+
+/* line 291, ../sass/footer.scss */
+.checkbox-custom,
+.checkbox-custom-label,
+.radio-custom,
+.radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+/* line 296, ../sass/footer.scss */
+.checkbox-custom:focus,
+.checkbox-custom-label:focus,
+.radio-custom:focus,
+.radio-custom-label:focus {
+  outline: none;
+}
+
+/* line 301, ../sass/footer.scss */
+.checkbox-custom-label,
+.radio-custom-label {
+  position: relative;
+  line-height: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* line 307, ../sass/footer.scss */
+.checkbox-custom + .checkbox-custom-label:before,
+.radio-custom + .radio-custom-label:before {
+  content: "";
+  background: #fff;
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* line 320, ../sass/footer.scss */
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  background: #FF055A;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* line 328, ../sass/footer.scss */
+.radio-custom + .radio-custom-label:before {
+  border-radius: 50%;
+}
+
+/* line 332, ../sass/footer.scss */
+.radio-custom:checked + .radio-custom-label:before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  color: #bbb;
+}
+
+/* line 341, ../sass/footer.scss */
+footer .main-footer,
+footer .footer-bottom {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/* line 345, ../sass/footer.scss */
+footer .main-footer .mail h4,
+footer .main-footer .mail a,
+footer .main-footer .popup-btn button,
+footer .mobile-footer .modal-btn button {
+  font-size: 20px;
+}
+.socials i{
+  transition: all 0.3s linear;
+}
+.socials i:hover{
+  color: #FF055A;
+}
+

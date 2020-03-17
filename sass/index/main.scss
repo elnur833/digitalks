@@ -1,0 +1,565 @@
+@import "../mixins/variables.scss";
+@import "../mixins/mixins.scss";
+@import "./animations.scss";
+
+#dragme {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #EC6367;
+    cursor: pointer;
+    z-index: 300;
+}
+#dragme .icon-drag {
+    width: 30px;
+    height: 30px;
+    background: url(https://static.enginethemes.com/main/img/drag-icon.png) no-repeat center center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    margin-top: -15px;
+}
+
+.wrapper{
+    .before-after{
+        position: relative;
+        .layout{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.486);
+        }
+    }
+}
+
+.main {
+    min-height: 100vh;
+    @include flex;
+    @include flex-align-center;
+    @include justify-content-center;
+    @include sm-screens {
+        min-height: 50vh;
+    }
+    .main-title {
+        @include md-screens {
+            display: none;
+        }
+        h1 {
+            @extend %MONTBOLD;
+            font-size: 48px;
+            letter-spacing: -1.9px;
+            color: $title-color;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+    }
+    .shark {
+        width: 600px;
+        margin: 0 auto;
+        @include md-screens {
+            width: 75%;
+        }
+        .scroll {
+            position: relative;
+            @include lg-screens {
+                display: none;
+            }
+            .main-scroll {
+                position: absolute;
+                right: -220px;
+                bottom: 0px;
+                text-align: center;
+                @include lg-screens{
+                    right: -180px;
+                }
+                .scroll-txt {
+                    @include transform-rotate(90deg);
+                    display: block;
+                    font-size: 9px;
+                    @extend %MONTMEDIUM;
+                    letter-spacing: 5px;
+                    color: $contact;
+                }
+                .line {
+                    width: 1px;
+                    background: $contact;
+                    height: 100px;
+                    display: block;
+                    margin: 20px 20px -13px 26.98px;
+                }
+                .dot {
+                    margin-left: 1px;
+                    color: $contact;
+                }
+            }
+        }
+        img  {
+            width: 100%;
+        }
+        
+    }   
+
+
+    
+}
+.partners {
+    .partners-title {
+        position: relative;
+        h1 {
+            @extend %title;
+            font-size: 182px;
+            @include lg-screens {
+                font-size: 58px;
+            }
+        }
+        h4 {
+            @extend %untitle;
+            bottom: 28px;
+            right: 50%;
+            @include lg-screens {
+                bottom: 5px;
+                right: 49%;
+                
+            }
+        }
+    }
+    .partner-logo-container {
+        @include md-screens {
+            width: 35%;
+        }
+        @include sm-screens {
+            width: 80%;
+        }
+        width: 65%;
+        margin: 0 auto;
+        margin-bottom: 35px;
+        img {
+            width: 100%;
+        }
+    }
+    .mobile-btn {
+        display:none;
+        @include sm-screens {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        button {
+            background: $blackred;
+            color: $white;
+            @extend %MONTMEDIUM;
+            border: none;
+            padding: 5px 100px;
+            border-radius: 3px;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+.about-area {
+    position: relative;
+    margin: 100px 0px;
+    @include sm-screens {
+        margin: 50px 0px;
+    }
+    .about-title {
+        position: relative;
+        .main-title-about {
+            @extend %title;
+            font-size: 111px;
+            @include lg-screens {
+                font-size: 38px;
+            }
+        }
+        .help-class {
+            top: 80px;
+            right: 50%;
+            @extend %untitle;
+            @include lg-screens {
+                top: 26px;
+                right: 47%;
+            }
+        }
+    }
+    .services {
+        @include flex;
+        @include flex-wrap;
+        @include space-between;
+        margin:100px 0px;
+        @include lg-screens {
+            width: 50px 0px;
+            @include flex-column;
+        }
+        .service {
+            @include flex;
+            width: calc(50% - 120px);
+
+            position: relative;
+            cursor: pointer;
+            @include flex-align-center;
+            @include lg-screens {
+                
+                width: 100%;
+            }
+            &:hover {
+                .service-info {
+                    h3 , p {
+                        color:$white;
+                        -webkit-transition: all .50s ease-in-out;
+                        transition: all .50s ease-in-out;
+                    }
+                }
+                .icon {
+                    img {
+                        visibility: visible;
+                    }
+                }
+                .background {
+                    width: 100%;
+                }
+            }
+            .service-info {
+                margin-left:10px;
+                padding: 10px 0px;
+                h3 {
+                    @extend %MONTREGULAR;
+                    font-size:20px;
+                }
+                p {
+                    font-size: 12px;
+                    @extend %MONTMEDIUM;
+                    color: $contact;
+                }
+            }
+            .icon {
+                // width: 50px;
+                img {
+                    width: 45px;
+                    visibility: hidden;
+                }
+            }
+            .background {
+                background-color: $whitered;
+                width: 0;
+                position: absolute;
+                height: 100%;
+                top: 0;
+                z-index: -1;
+                -webkit-transition: all .50s ease-in-out;
+                transition: all .50s ease-in-out;
+                left: 0;
+            }
+        }
+    }
+}
+.works {
+    .works-title {
+        position: relative;
+        h1 {
+            @extend %title;
+            font-size: 182px;
+            @include lg-screens {
+                font-size: 58px;
+            }
+        }
+        h3 {
+            @extend %untitle;
+            bottom: 45px;
+            right: 56%;
+            @include lg-screens {
+                bottom: 5px;
+                right: 49%;
+                
+            }
+        }
+    }
+    .mob-applications {
+        margin-top: 100px;
+        @extend %project;
+        @include sm-screens {
+            margin-top: 30px;
+        }
+    }
+    .web-applications {
+        @extend %project;
+        .project-preview {
+            height: 261px;
+            @include lg-screens {
+                height: 200px;
+            }
+            @include sm-screens {
+                height: auto;
+               
+            }
+        }
+    }
+}
+
+
+.feedback {
+    position: relative;
+    background: $gray;
+    width: 100%;
+    margin-bottom: 100px;
+    .owl-carousel {
+        touch-action: manipulation;
+    }
+    .feedback-title {
+        display: none;
+        @include md-screens {
+            display: block;
+            text-align: center;
+            margin-bottom: 0px;
+            position: absolute;
+            top: -50px;
+            left: 0;
+            right: 0;
+            font-size: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: $gray;
+        }
+    }
+    .owl-nav {
+        .owl-prev {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            font-size: 40px;
+            color: $blackred;
+        }
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            font-size: 40px;
+            color: $blackred;
+        }
+    }
+    .feedbacks {
+        .feedback-area {
+            @include flex;
+            @include space-around;
+            padding: 40px 0px;
+            @include md-screens {
+                @include flex-column;
+            }
+            .client-image {
+                width: calc(40% - 20px);
+                margin-left: auto;
+                @include md-screens {
+                    width: 50%;
+                    margin: 0 auto;
+                    margin-bottom: 40px;
+                }
+                img {
+                    width: 292px;
+                    margin-left: auto;
+                    margin-right: 40px;
+                    height: 292px;
+                    // border-radius: 50%;
+                    @include lg-screens {
+                        width: 240px;
+                        height: 240px;
+                    }
+                    @include sm-screens {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .client-feedbacks {
+                width: calc(60% - 20px);
+                @include flex;
+                @include flex-align-center;
+                @include justify-content-center;
+                @include flex-column;
+                @include md-screens {
+                    width: 100%;
+                }
+                .client-name {
+                    font-size: 25px;
+                    @extend %MONTREGULAR;
+                    @extend %client;
+                    margin-bottom: 11px;
+                }
+                .client-position {
+                    margin-bottom: 40px;
+                    font-size: 12px;
+                    @extend %MONTMEDIUM;
+                    @extend %client;
+                }
+                p {
+                    color: $client-color;
+                    @extend %MONTREGULAR;
+                    font-size: 15px;
+                    width: 65%;
+                    text-align: justify;
+                    margin-right: auto;
+                    @include md-screens {
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    @include sm-screens {
+                        width: 85%;
+                    }
+                }
+            }
+        }
+        .owl-dots {
+            @include flex;
+            @include space-around;
+            width: 25%;
+            margin: 0 auto;
+            position: relative;
+            top: 40px;
+            .owl-dot {
+                width: 5px;
+                height: 5px;
+                background: $contact;
+                border-radius: 50%;
+            }
+            .owl-dot.active {
+                background:$red;
+                width: 8px;
+                height: 8px;
+            }
+        }
+    }
+}
+
+%client {
+    width: 100%;
+    text-align: left;
+    color: $client-color;
+    @include md-screens {
+        text-align: center;
+    }
+}
+%title {
+    @extend %MONTBLACK;
+    text-align: center;
+    color: $gray;
+}
+%untitle {
+    position: absolute;
+    font-size: 34px;
+    color: $main-colors;
+    @extend %MONTREGULAR;
+    @include lg-screens{
+        font-size: 12px;
+    }
+}
+%project {
+    .project {
+        @include flex;
+        @include space-between;
+        margin-bottom: 100px;
+        @include sm-screens {
+            margin-bottom: 45px;
+        }
+        .project-img {
+            width: calc(60% - 40px);
+            @include sm-screens {
+                width: calc(60% - 10px);
+            }
+            video {
+                width: 100%;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .project-preview {
+            width: calc(40% - 40px);
+            @include flex;
+            @include flex-column;
+            @include flex-align-center;
+            @include justify-content-center;
+            @include sm-screens {
+                -webkit-box-pack: unset;
+                -webkit-justify-content: unset;
+                    -ms-flex-pack: unset;
+                        justify-content: unset;
+                        width: calc(40% - 10px);
+            }
+            h4 , h1 {
+                text-align: left;
+                width: 100%;
+            }
+            h4 {
+                font-size: 12px;
+                @extend %MONTMEDIUM;
+                color: $main-colors;
+                margin-bottom: 20px;
+                @include md-screens {
+                    font-size: 12px;
+                }
+            }
+            h1 {
+                @extend %MONTBOLD;
+                font-size: 43px;
+                color: $main-colors;
+                margin-bottom: 30px;
+                @include md-screens {
+                    font-size: 14px;
+                }
+            }
+            p {
+                font-size: 12px;
+                @extend %MONTREGULAR;
+                color: $main-colors;
+                margin-bottom: 25px;
+                @include md-screens {
+                    display: none;
+                }
+            }
+            .anchor {
+                width: 100%;
+                @include flex;
+                @include flex-align-center;
+                @include md-screens {
+                    display: none;
+                }
+                .line {
+                    width: 60px;
+                    background: $lrn;
+                    height: 1px;
+                    margin-right: 15px;
+                }
+                a {
+                    text-align: left;
+                    line-height: 1;
+                    @extend %MONTBOLD;
+                    color: $blackred;
+                    font-size: 12px;
+                    text-decoration: none;
+                }
+            }
+            .btn-more {
+                display: none;
+                width: 100%;
+
+                @include md-screens {
+                    display: block;
+                }
+                a {
+                    text-decoration: none;
+                    color: $blackred;
+                    border: solid 2px $blackred;
+                    font-size: 12px;
+                    @extend %MONTMEDIUM;
+                    padding: 5px 20px;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
