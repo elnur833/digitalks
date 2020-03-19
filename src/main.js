@@ -275,6 +275,10 @@ anime.timeline({loop: true})
     delay: (el, i) => 100 + 30 * i
   });
 
-
+  $('._1cSXwx0GRH3cHOt6HZtOJW').click(function() {
+    $('.menu_open').toggleClass('active active_second');
+    $('.menu_box').slideToggle();
+    $('body').toggleClass('fixed_menu');
+});
 
   

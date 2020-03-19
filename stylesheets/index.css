@@ -179,6 +179,8 @@ body {
   filter: grayscale(100%);
   transition: all 0.1s linear;
   width: 100%;
+  object-fit: contain;
+  max-height: 159px;
 }
 .partner-logo-container img:hover {
   filter: grayscale(0);
