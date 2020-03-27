@@ -279,6 +279,7 @@ anime.timeline({loop: true})
     $('.menu_open').toggleClass('active active_second');
     $('.menu_box').slideToggle();
     $('body').toggleClass('fixed_menu');
+    $('.left_menu ul').stop().fadeToggle(1200);
 });
 
   
