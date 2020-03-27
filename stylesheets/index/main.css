@@ -2413,6 +2413,14 @@ body{
     letter-spacing: 6px;
   }
 
+  .digi_logo{
+    left: 0 !important;
+  }
+
+  .menu_box_left{
+    justify-content: flex-start;
+  }
+
   .wrapper{
     min-height: inherit;
   }
@@ -2438,7 +2446,7 @@ body{
   }
 
   .menu_box_left{
-    padding-top: 25px;
+    padding-top: 50px;
     padding-bottom: 20px;
   }
 
@@ -2475,7 +2483,9 @@ body{
     height: 160px;
   }
 
-  
+  .menu_box_left{
+    padding-top: 25px !important;
+  }
 
   .digi_logo{
     width: 180px !important;
@@ -2552,7 +2562,7 @@ body{
     margin-bottom: 20px;
   }
   .toggler em{
-    width: 28px;
+    width: 25px;
     height: 2px;
   }
 
