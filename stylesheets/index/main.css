@@ -2438,8 +2438,8 @@ body{
   }
 
   .menu_box_left{
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 25px;
+    padding-bottom: 20px;
   }
 
   .menu_box_right>div{
@@ -2448,7 +2448,7 @@ body{
   }
 
   .menu_box_right{
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 20px;
   }
 
@@ -2460,6 +2460,7 @@ body{
   .menu_box{
     padding: 50px 20px;
     overflow-y: scroll;
+    padding-bottom: 0 !important;
   }
 
   
@@ -2534,6 +2535,7 @@ body{
   .ml12{
     font-size: 27px;
     margin-bottom: 0;
+    margin-top: 65px;
   }
 
   .main_banner_overlay p{
@@ -2587,6 +2589,17 @@ body{
     z-index: 999;
   }
 
+.left_menu ul li a{
+  font-size: 24px !important;
+}
+
+._1uL5-Fd3sWfg8nXVfAGPT5{
+  font-size: 17px;
+}
+
+._1rRVdvjF-UOjzE3L1ipHvh{
+  margin-bottom: 25px;
+}
 
   
 }
