@@ -249,7 +249,6 @@ body,
   display: flex;
   flex-direction: column;
   color: transparent;
-  -webkit-text-stroke: #b44445;
   -webkit-text-stroke-width: 2px;
   transition: all 0.2s linear;
   position: relative;
@@ -257,7 +256,7 @@ body,
   left: -10px;
 }
 #open-connect:hover {
-  color: #b44445;
+
 }
 #open-connect svg {
   position: unset;
@@ -265,10 +264,10 @@ body,
   width: 50px;
 }
 #open-connect:hover svg g {
-  fill: #b44445;
+
 }
 #open-connect svg g {
-  stroke: #b44445;
+  
   transition: all 0.2s linear;
 }
 
@@ -720,5 +719,22 @@ body,
   }
   .mobile-footer-contacts{
     margin-bottom: 12px;
+  }
+}
+
+
+@media(max-width: 768px){
+  #project-images{
+    height: 400px !important;
+  }
+}
+
+@media(max-width: 500px){
+  #project-images{
+    height: 250px !important;
+  }
+
+  #project-images .layout h2{
+    margin-bottom: 90px;
   }
 }

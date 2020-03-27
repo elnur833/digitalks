@@ -2646,3 +2646,22 @@ body{
     flex: 0 0 100% !important;
   }
 }
+
+.pd_wrapper{
+  margin-bottom: 120px;
+  position: relative;
+  float: left;
+}
+
+._1rRVdvjF-UOjzE3L1ipHvh{
+  font-size: 1.75rem;
+}
+
+body{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.container-mob{
+  display: none !important;
+}
+

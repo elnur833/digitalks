@@ -1,11 +1,6 @@
 header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  /* box-shadow: 0 0px 10px 0px #b44445; */
-  z-index: 1;
-  background-color: #ffffff;
+  position: relative;
+  float: left;
 }
 header .logo {
   width: 140px;
@@ -31,6 +26,10 @@ header nav ul li a {
 header nav ul li a:hover {
   text-decoration: none;
   color: #b44445;
+}
+
+.portfolio_section{
+  margin-top: 150px;
 }
 #lang-menu {
   cursor: pointer;
@@ -295,7 +294,7 @@ header #menu .menu-socials ul li:nth-child(3):before {
 .anchor a {
   text-align: center;
   line-height: 1;
-  color: #b44445;
+  color: #fff200;
   font-size: 20px;
   text-decoration: none;
   transition: all 0.2s linear;
@@ -321,7 +320,7 @@ header #menu .menu-socials ul li:nth-child(3):before {
 .anchor-mobile a {
   text-align: center;
   line-height: 1;
-  color: #b44445;
+  color: #fff200;
   font-size: 20px;
   text-decoration: none;
   transition: all 0.2s linear;
@@ -340,7 +339,7 @@ header #menu .menu-socials ul li:nth-child(3):before {
   display: flex;
   flex-direction: column;
   color: transparent;
-  -webkit-text-stroke: #b44445;
+  
   -webkit-text-stroke-width: 2px;
   transition: all 0.2s linear;
   position: relative;
@@ -348,7 +347,7 @@ header #menu .menu-socials ul li:nth-child(3):before {
   left: -10px;
 }
 #open-connect:hover {
-  color: #b44445;
+  
 }
 #open-connect svg {
   position: unset;
@@ -356,10 +355,10 @@ header #menu .menu-socials ul li:nth-child(3):before {
   width: 50px;
 }
 #open-connect:hover svg g {
-  fill: #b44445;
+  
 }
 #open-connect svg g {
-  stroke: #b44445;
+
   transition: all 0.2s linear;
 }
 
@@ -398,5 +397,16 @@ header #menu .menu-socials ul li:nth-child(3):before {
   #content .works-title h3 {
     font-size: 12px;
     top: 50%;
+  }
+}
+
+
+@media(max-width: 768px){
+  .portfolio_section{
+    margin-top: 80px;
+  }
+
+  #content .row .col-md-6:first-child{
+    margin-top: 40px;
   }
 }
