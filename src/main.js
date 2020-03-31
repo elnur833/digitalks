@@ -271,7 +271,7 @@ anime.timeline({loop: true})
     translateX: [0,-30],
     opacity: [1,0],
     easing: "easeInExpo",
-    duration: 3000,
+    duration: 7000,
     delay: (el, i) => 100 + 30 * i
   });
 
@@ -281,5 +281,7 @@ anime.timeline({loop: true})
     $('body').toggleClass('fixed_menu');
     $('.left_menu ul').stop().fadeToggle(1200);
 });
+
+ 
 
   
