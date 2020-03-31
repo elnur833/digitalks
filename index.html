@@ -27,7 +27,7 @@
 </head>
 
 <header>
-    <div class="_1cSXwx0GRH3cHOt6HZtOJW d" data-navigation-active="false"><svg version="1.1" x="0px" y="0px" viewBox="0 0 130 130" style="width:100%"><filter id="dropshadow" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="1"></feGaussianBlur><feOffset dx="2" dy="2" result="offsetblur"></feOffset><feComponentTransfer><feFuncA type="linear" slope="0.25"></feFuncA></feComponentTransfer><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><polygon points="0,0 130,0 130,130" fill="#292B32" data-cta="true" style="filter:url(#dropshadow)" class="VETn9wlnXrC-mWKPEahOt"></polygon></svg>
+    <div class="_1cSXwx0GRH3cHOt6HZtOJW main_menu_open" data-navigation-active="false"><svg version="1.1" x="0px" y="0px" viewBox="0 0 130 130" style="width:100%"><filter id="dropshadow" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="1"></feGaussianBlur><feOffset dx="2" dy="2" result="offsetblur"></feOffset><feComponentTransfer><feFuncA type="linear" slope="0.25"></feFuncA></feComponentTransfer><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><polygon points="0,0 130,0 130,130" fill="#292B32" data-cta="true" style="filter:url(#dropshadow)" class="VETn9wlnXrC-mWKPEahOt"></polygon></svg>
         <a class="toggler menu_open"><span><em></em><em></em><em></em></span></a>
     </div>
 </header>
@@ -52,6 +52,8 @@
                     
                    
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+                    <button class="scroll_down"></button>
                 </div>
             </div>
             <!-- End of area with logos -->
@@ -1390,6 +1392,14 @@
     
 
 <div class="menu_box">
+    <div class="lang_box">
+      <span class="active_lang">EN</span>
+        <div class="langs">
+          <ul class="full">
+            <li><a href="http://shahdag.az/az">AZ</a></li><li><a href="http://shahdag.az/ru">RU</a></li>
+          </ul>
+        </div>
+    </div>
     <a href="#" class="digi_logo">
         <img src="assets/img/logo.svg">
     </a>
@@ -1500,7 +1510,7 @@
 <div class="black_overlay"></div>
 
 
-<button class="scroll_to_top"></button>
+<!--<button class="scroll_to_top"></button>-->
 
 <script type="text/javascript">
   $(".scroll_to_top").click(function() {
@@ -1518,8 +1528,14 @@
 
   
     $(".main_banner_overlay").delay(1000).css('opacity' , '1');
-    $('._1cSXwx0GRH3cHOt6HZtOJW').delay(1000).css('visibility' , 'visible');
+    $('.main_menu_open').delay(1000).css('visibility' , 'visible');
     $('.site-intro__logo').delay(2400).fadeIn();
+
+var $win = $(window);
+var winH = $win.height(); 
+$(".scroll_down").click(function () {
+   $("html, body").animate({scrollTop: winH}, 500);
+});
 /*test*/
 
  
