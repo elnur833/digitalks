@@ -1380,11 +1380,11 @@ html {
  .view-services .views-field-field-short-title a:hover,
  .view-services .views-field-field-short-title a:active,
  .view-services .views-field-field-short-title a:focus {
-	color: #402a8c;
+	color: #ffc200;
 }
 
 .view-services .view-content a:hover .views-field-field-short-title:before{
-  width: 15%;
+  width: 25%;
   background: #ffd140;
 }
 
@@ -2831,13 +2831,96 @@ body{
     background-size: contain;
     width: 50px;
     height: 90px;
-    background-image: url(img/scroll.svg);
+    
     background-color: transparent;
     border: 0;
     cursor: pointer;
     outline: none !important;
     transition: .2s ease;
 }
+
+.scroll_down .mouse {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 42px;
+  margin: 0 auto 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ffc200;
+  border-radius: 23px;
+}
+.scroll_down .mouse > * {
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 5px;
+  height: 8px;
+  margin: -4px 0 0 -2px;
+  background: #ffc200;
+  border-radius: 10px;
+  -webkit-animation: ani-mouse 2.5s linear infinite;
+  -moz-animation: ani-mouse 2.5s linear infinite;
+  animation: ani-mouse 2.5s linear infinite;
+}
+
+@-webkit-keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 25%;
+  }
+  15% {
+    opacity: 1;
+    top: 65%;
+  }
+  50% {
+    opacity: 0;
+    top: 65%;
+  }
+  100% {
+    opacity: 0;
+    top: 25%;
+  }
+}
+@-moz-keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+@keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
 
 .scroll_down:hover{
   opacity: .8;
