@@ -2766,3 +2766,7 @@ body{
   transform: translate(-50% , -50%);filter: grayscale(100%);
   opacity: .8;
 }
+
+.site-footer{
+  display: none !important;
+}
