@@ -32,6 +32,10 @@ html, body{
   width: 180px;
 }
 
+.site-intro__logo{
+  display: none;
+}
+
 /* line 27, ../../sass/mixins/_variables.scss */
 .main .main-title h1,
 .works .mob-applications .project .project-preview h1,
@@ -2676,6 +2680,10 @@ body{
   height: auto;
 }
 
+.newcls{
+
+}
+
 @media(max-width: 1200px){
   ._2AJZNEusgzFS_1awKvat-y{
     flex-direction: column;
@@ -2730,3 +2738,33 @@ body{
   display: none;
 }
 
+.field-content img{
+  width: 100%;
+  max-height: 70px;
+}
+
+.partner_normal{
+  opacity: 0;
+  transition: .8s ease;
+}
+
+.partner_gray{
+  opacity: 1;
+  transition: .8s ease;
+  display: none;
+}
+
+.partners_cont .partner-logo-container a:hover img{
+  filter: inherit;
+  opacity: 1;
+}
+
+
+
+.partner-logo-container img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);filter: grayscale(100%);
+  opacity: .8;
+}
