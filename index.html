@@ -210,13 +210,46 @@
                 <!-- MOBILE APPLICATIONS START -->
                 <div class="mob-applications">
                     <div class="project">
-                        <div class="project-img" style="position: relative;">
+                        <div class="project-img project_img_and_video" style="position: relative;" data-src="assets/video/DS.mp4">
 
-                            <img src="assets/img/DS.gif">
+                            <video autoplay="" loop="" muted="" poster="" preload="auto" playsinline="" class="back_video" id="mc_video1">
+
+                                  <source src="" type="video/webm">
+
+                            </video>
+                            <img src="assets/img/ds_img.jpg">
 
                         </div>
                         <div class="project-preview">
                             <h1>ICHERISHEHER</h1>
+                            <h4>Design / Mobile</h4>
+                            <p>Site for the Chicago club, in the style of Art Deco.
+                                The restaurant is located in the heart of Baku,
+                                near the ﬂag square.
+                            </p>
+                            <div class="anchor">
+                                <a href="app.html"><i class="fas fa-long-arrow-alt-right"></i> View Work</a>
+                            </div>
+                            <div class="btn-more">
+                                <a href="app.html">View Work</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob-applications">
+                    <div class="project">
+                        <div class="project-img project_img_and_video" style="position: relative;" data-src="assets/video/home.webm">
+
+                            <video autoplay="" loop="" muted="" poster="" preload="auto" playsinline="" class="back_video" id="mc_video1">
+
+                                  <source src="" type="video/webm">
+
+                            </video>
+                            <img src="assets/img/hoverimg.jpg">
+
+                        </div>
+                        <div class="project-preview">
+                            <h1>EURO 2020</h1>
                             <h4>Design / Mobile</h4>
                             <p>Site for the Chicago club, in the style of Art Deco.
                                 The restaurant is located in the heart of Baku,
@@ -238,9 +271,7 @@
                             <h1>ICHERISHEHER</h1>
 
                             <div class="project-img" style="position: relative;">
-                                <video id="app" preload="auto" loop="loop">
-                                    <source src="assets/video/DS.mp4" type="video/mp4">
-                                </video>
+                                
                             </div>
                             <h4>Design / Mobile</h4>
                             <p>Site for the Chicago club, in the style of Art Deco.
@@ -1304,7 +1335,7 @@
                 <div class="copy-line"><span>Back</span></div>
             </a>
         </section><!-- /AboutSection -->
-        <div id="site-intro" class="site-intro">
+        <!--<div id="site-intro" class="site-intro">
             <div class="intro-half intro-half--left">
                 <div class="intro-half__fill"></div>
                 <div class="intro-half__fill"></div>
@@ -1341,7 +1372,7 @@
             <div class="site-intro__logo">
                 <img src="assets/img/logo.svg">
             </div>
-        </div>
+        </div>-->
         <div class="stripes">
             <div class="stripe">
                 <div class="stripe__inner"></div>
@@ -1512,6 +1543,19 @@ $(".scroll_down").click(function () {
    $("html, body").animate({scrollTop: winH}, 500);
 });
 /*test*/
+
+
+
+$(".project_img_and_video").hover(
+  function() {
+    var url = $(this).attr("data-src");
+    $(this).children('video').attr('src' , url);
+    $(this).children('img').fadeOut(600);
+  }, function() {
+    
+    $(this).children('img').fadeIn(200);
+  }
+);
 
  
 </script>

@@ -3014,3 +3014,29 @@ body{
     height: 40px;
     font-weight: 500;
 }
+
+.project_img_and_video{
+  overflow: hidden;
+  height: 490px;
+}
+
+.project_img_and_video img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project_img_and_video video{
+  height: 100%;
+}
+
+
+@media(max-width: 1600px){
+  .project_img_and_video{
+    overflow: hidden;
+    height: 377px;
+  }
+}
