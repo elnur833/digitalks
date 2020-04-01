@@ -118,7 +118,7 @@ footer .footer-bottom .footer-adress h4 a{
   transition: all 0.2s linear;
 }
 footer .footer-bottom .footer-adress h4 a:hover{
-  color: #fff200;
+  color: #ffc200;
   text-decoration: none;
 }
 
@@ -131,6 +131,14 @@ footer .footer-bottom .footer-contacts h4 a {
   text-decoration: none;
   color: #787878;
   font-size: 18px;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+  transition: .2s ease;
+}
+
+footer .footer-bottom .footer-contacts h4 a:hover{
+  color: #ffc200;
 }
 /* line 63, ../sass/footer.scss */
 footer .footer-bottom .footer-contacts .socials {
@@ -535,6 +543,6 @@ footer .mobile-footer .modal-btn button {
   transition: all 0.3s linear;
 }
 .socials i:hover{
-  color: #fff200;
+  color: #ffc200;
 }
 
