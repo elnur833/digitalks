@@ -2576,7 +2576,13 @@ body{
     top: 15px !important;
   }
 
+  .lang_box{
+    margin-top: -24px !important;
+  }
 
+  .main_menu_burger .lang_box{
+    margin-top: -37px !important;
+  }
 
   .view-services .views-field-field-short-title .field-content:after{
     content: none;
