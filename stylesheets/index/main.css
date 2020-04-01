@@ -2254,7 +2254,7 @@ body{
     height: 100vh;
     left: 0;
     top: 0;
-    z-index: 9;
+    z-index: 99;
     background-color: #fff200;
     display: none;
    
