@@ -210,19 +210,19 @@
                 <!-- MOBILE APPLICATIONS START -->
                 <div class="mob-applications">
                     <div class="project">
-                        <div class="project-img project_img_and_video" style="position: relative;" data-src="assets/video/DS.mp4">
+                        <div class="project-img project_img_and_video iceriseher" style="position: relative;" data-src="assets/video/euro_20.mp4" data-special="1">
 
                             <video autoplay="" loop="" muted="" poster="" preload="auto" playsinline="" class="back_video" id="mc_video1">
 
                                   <source src="" type="video/webm">
 
                             </video>
-                            <img src="assets/img/ds_img.jpg">
+                            <img src="assets/img/hoverimg.jpg">
 
                         </div>
                         <div class="project-preview">
-                            <h1>ICHERISHEHER</h1>
-                            <h4>Design / Mobile</h4>
+                            <h1>EURO 2020</h1>
+                            <h4>Design / Web site</h4>
                             <p>Site for the Chicago club, in the style of Art Deco.
                                 The restaurant is located in the heart of Baku,
                                 near the ﬂag square.
@@ -238,19 +238,19 @@
                 </div>
                 <div class="mob-applications">
                     <div class="project">
-                        <div class="project-img project_img_and_video" style="position: relative;" data-src="assets/video/euro.mp4">
+                        <div class="project-img project_img_and_video" style="position: relative;" data-src="assets/video/merchant.mp4" data-special="2">
 
                             <video autoplay="" loop="" muted="" poster="" preload="auto" playsinline="" class="back_video" id="mc_video1">
 
                                   <source src="" type="video/webm">
 
                             </video>
-                            <img src="assets/img/hoverimg.jpg">
+                            <img src="assets/img/merchant_cover.jpg">
 
                         </div>
                         <div class="project-preview">
-                            <h1>EURO 2020</h1>
-                            <h4>Design / Mobile</h4>
+                            <h1>Merchant</h1>
+                            <h4>Design / Web site</h4>
                             <p>Site for the Chicago club, in the style of Art Deco.
                                 The restaurant is located in the heart of Baku,
                                 near the ﬂag square.
@@ -264,31 +264,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="mob-applications-mobile">
-                    <div class="project-mobile">
-
-                        <div class="project-preview">
-                            <h1>ICHERISHEHER</h1>
-
-                            <div class="project-img" style="position: relative;">
-                                
-                            </div>
-                            <h4>Design / Mobile</h4>
-                            <p>Site for the Chicago club, in the style of Art Deco.
-                                The restaurant is located in the heart of Baku,
-                                near the ﬂag square.
-                            </p>
-                            <div class="anchor">
-                                <a href="app.html"><i class="fas fa-long-arrow-alt-right"></i> View Work</a>
-                            </div>
-                            <div class="btn-more">
-                                <a href="#">View Work</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- MOBILE APPLICATIONS END -->
-                <div class="web-applications">
+                <!--<div class="web-applications">
                     <div class="project">
                         <div class="project-img">
                             <video id="final" preload="auto" loop="loop">
@@ -382,8 +360,8 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="web-applications-mobile">
+                </div>-->
+                <!--<div class="web-applications-mobile">
                     <div class="project-mobile">
 
                         <div class="project-preview">
@@ -484,7 +462,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="row">
 
                     <div class="col-md-12 text-center">
@@ -1335,7 +1313,7 @@
                 <div class="copy-line"><span>Back</span></div>
             </a>
         </section><!-- /AboutSection -->
-        <!--<div id="site-intro" class="site-intro">
+        <div id="site-intro" class="site-intro">
             <div class="intro-half intro-half--left">
                 <div class="intro-half__fill"></div>
                 <div class="intro-half__fill"></div>
@@ -1372,7 +1350,7 @@
             <div class="site-intro__logo">
                 <img src="assets/img/logo.svg">
             </div>
-        </div>-->
+        </div>
         <div class="stripes">
             <div class="stripe">
                 <div class="stripe__inner"></div>
@@ -1546,7 +1524,8 @@ $(".scroll_down").click(function () {
 
 
 
-$(".project_img_and_video").hover(
+
+/*$(".project_img_and_video").hover(
   function() {
     var url = $(this).attr("data-src");
     $(this).children('video').attr('src' , url);
@@ -1556,8 +1535,49 @@ $(".project_img_and_video").hover(
     $(this).children('img').fadeIn(200);
   }
 );
+*/
+/*var hieghtThreshold = $(".project_img_and_video").offset().top;
 
- 
+var heightplus = hieghtThreshold - 150;
+
+$(window).scroll(function() {
+    var url_ = $('.project_img_and_video').attr("data-src");
+    
+   if($(window).scrollTop() >= heightplus ) {
+      $('.project_img_and_video').children('video').attr('src' , url_);
+      $('.project_img_and_video').children('img').fadeOut(600);
+   } else {
+       $('.project_img_and_video').children('img').fadeIn(200);
+       $('.project_img_and_video').children('video').attr('src' , '');
+   }
+});*/
+
+
+var home = $(".project_img_and_video");
+var arr = [];
+ $(window).scroll(function() {
+    for(var i = 0; i < home.length; i++){
+        var video_link = $(home[i]).attr("data-src");
+        var hieghtThreshold = $(home[i]).offset().top;
+        var video_data = $(home[i]).attr("data-special");
+
+
+        var heightplus = hieghtThreshold - 150;   
+
+          if (!arr.includes(video_data)) {
+             if($(window).scrollTop() >= heightplus ) {
+              $(home[i]).children('video').attr('src' , video_link);
+              $(home[i]).children('img').fadeOut(600);
+              arr.push(video_data);
+             
+           } else {
+              //$(home[i]).children('img').fadeIn(200);
+              
+           }
+          }
+    }   
+
+ });
 </script>
 
 </body>
