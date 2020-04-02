@@ -1723,7 +1723,7 @@ body{
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  z-index: 10;
+  z-index: 99999;
   opacity: 0;
   
   -webkit-animation: _2-LS0PIazghCwWJt_Y3X5i .25s ease-in-out .25s forwards;
@@ -1883,7 +1883,7 @@ body{
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  z-index: 10;
+  z-index: 9999;
   opacity: 0;
   -webkit-animation: _2-LS0PIazghCwWJt_Y3X5i .25s ease-in-out .25s forwards;
           animation: _2-LS0PIazghCwWJt_Y3X5i .25s ease-in-out .25s forwards; }
@@ -2254,7 +2254,7 @@ body{
     height: 100vh;
     left: 0;
     top: 0;
-    z-index: 99;
+    z-index: 90;
     background-color: #fff200;
     display: none;
    
